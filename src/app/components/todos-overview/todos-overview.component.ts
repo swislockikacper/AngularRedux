@@ -17,8 +17,6 @@ export class TodosOverviewComponent implements OnInit {
   ngOnInit() {
   }
 
-  resetTodos = () => {
-    this.ngRedux.dispatch({ type: RESET });
-  }
+  resetTodos = () => this.ngRedux.dispatch({ type: RESET });
 
 }

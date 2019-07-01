@@ -1,4 +1,4 @@
 <p>
   <span>Last update: {{ lastUpdate | async | date:'mediumTime'}} | Total items: {{ (todos | async).length }}</span>
 </p>
-<button (click)="reset()">Reset list</button>
+<button (click)="resetTodos()">Reset list</button>

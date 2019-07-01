@@ -1,0 +1,5 @@
+<h4>Add Todo</h4>
+<form (ngSubmit)="onSubmit()" #todoForm="ngForm">
+  <input type="text" placeholder="Description" [(ngModel)]="model.description" #description="ngModel"/>
+  <button type="submit">Add</button>
+</form>
