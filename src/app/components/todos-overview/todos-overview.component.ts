@@ -4,11 +4,11 @@ import { IAppState } from '../../store/store';
 import { RESET } from '../../store/actions';
 
 @Component({
-  selector: 'app-todos',
-  templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.scss']
+  selector: 'app-todos-overview',
+  templateUrl: './todos-overview.component.html',
+  styleUrls: ['./todos-overview.component.scss']
 })
-export class TodosComponent implements OnInit {
+export class TodosOverviewComponent implements OnInit {
   @select() todos;
   @select() lastUpdate;
 
