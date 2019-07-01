@@ -5,8 +5,8 @@ import { RESET } from '../../store/actions';
 
 @Component({
   selector: 'app-todos',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.scss']
+  templateUrl: './todos.component.html',
+  styleUrls: ['./todos.component.scss']
 })
 export class TodosComponent implements OnInit {
   @select() todos;
