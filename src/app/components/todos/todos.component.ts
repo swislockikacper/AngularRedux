@@ -4,7 +4,7 @@ import { IAppState } from '../../store/store';
 import { RESET } from '../../store/actions';
 
 @Component({
-  selector: 'app-todo',
+  selector: 'app-todos',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss']
 })

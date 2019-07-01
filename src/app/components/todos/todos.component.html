@@ -1,3 +1,4 @@
 <p>
-  todo works!
+  <span>Last update: {{ lastUpdate | async | date:'mediumTime'}} | Total items: {{ (todos | async).length }}</span>
 </p>
+<button (click)="reset()">Reset list</button>
