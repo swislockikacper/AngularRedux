@@ -1,4 +1,4 @@
-import { ITodo } from '../components/interfaces/todo';
+import { ITodo } from '../interfaces/todo';
 import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO, RESET } from './actions';
 
 export interface IAppState {
@@ -27,7 +27,7 @@ export function rootReducer(state, action) {
             return Object.assign({}, state, {
                 todos: [
                     ...state.todos.slice(0, index),
-                    Object.assign({}, todo, { isCompleted: !todo.isCompleted }),
+                    Object.assign({}, todo, { done: !todo.done }),
                     ...state.todos.slice(index + 1)
                 ],
                 lastUpdate: new Date()
