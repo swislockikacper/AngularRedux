@@ -23,8 +23,10 @@ export class TodosComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit = () => this.ngRedux.dispatch({type: ADD_TODO, todo: this.model});
-
+  onSubmit = () => {
+    this.ngRedux.dispatch({type: ADD_TODO, todo: this.model});
+    this.model.description = '';
+  }
   toggleTodo = (todo) => this.ngRedux.dispatch({type: TOGGLE_TODO, id: todo.id});
 
   removeTodo = (todo) => this.ngRedux.dispatch({type: REMOVE_TODO, id: todo.id});

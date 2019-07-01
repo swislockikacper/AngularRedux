@@ -1,0 +1,37 @@
+.done {
+  text-decoration: line-through;
+  color: rgb(8, 185, 8);
+}
+
+form {
+  input {
+    height: 1.6rem;
+  }
+
+  button {
+    background: rgb(2, 235, 33);
+    width: 4rem;
+    height: 2rem;
+  }
+}
+
+section {
+  text-align: center;
+
+  table {
+    margin: 0 auto;
+
+    tr{
+      td{
+        &.desc{
+          cursor: pointer;
+        }
+
+        button{
+          background: rgb(243, 0, 0);
+          color: #fff;
+        }
+      }
+    }
+  }
+}

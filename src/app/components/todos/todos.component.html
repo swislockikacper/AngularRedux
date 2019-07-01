@@ -1,5 +1,23 @@
 <h4>Add Todo</h4>
 <form (ngSubmit)="onSubmit()" #todoForm="ngForm">
-  <input type="text" placeholder="Description" [(ngModel)]="model.description" #description="ngModel"/>
+  <input type="text" placeholder="Description" [(ngModel)]="model.description" #description="ngModel" name="description"/>
   <button type="submit">Add</button>
 </form>
+
+<section *ngIf="(todos | async)?.length!=0">
+  <h4>List</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos | async">
+        <td (click)="toggleTodo(todo)" class="desc"><span [ngClass]="{'done' : todo.done}">{{ todo.description }}</span></td>
+        <td><button (click)="removeTodo(todo)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

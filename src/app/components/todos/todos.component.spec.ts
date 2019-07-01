@@ -4,11 +4,11 @@ import { TodosComponent } from './todos.component';
 
 describe('TodosComponent', () => {
   let component: TodosComponent;
-  let fixture: ComponentFixture<TodoComponent>;
+  let fixture: ComponentFixture<TodosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoComponent ]
+      declarations: [ TodosComponent ]
     })
     .compileComponents();
   }));
