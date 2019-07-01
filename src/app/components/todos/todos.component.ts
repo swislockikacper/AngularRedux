@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgRedux, select } from '@angular-redux/store';
-import { IAppState } from '../../store';
-import { RESET } from '../../actions';
+import { IAppState } from '../../store/store';
+import { RESET } from '../../store/actions';
 
 @Component({
   selector: 'app-todo',
